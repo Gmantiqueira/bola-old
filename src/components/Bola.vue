@@ -1,6 +1,6 @@
 <template>
   <v-card class="mx-auto pb-1" max-width="344">
-    <v-img :src="imgLink" height="auto"></v-img>
+    <v-img :src="repository + imgLink" height="auto"></v-img>
 
     <v-card-title class="d-flex justify-center">{{title}}</v-card-title>
 
@@ -18,8 +18,15 @@ export default {
   data: () => ({
     error: ""
   }),
+  computed: {
+    repository() {
+      return process.env.NODE_ENV == "development" ? "" : "/bola";
+    }
+  },
   methods: {
     downloadItem(url, title) {
+      /* eslint-disable no-console */
+      console.log(process.env);
       Axios.get(url, { responseType: "blob" })
         .then(({ data }) => {
           const blob = new Blob([data], { type: "application/jpg" });
