@@ -5,7 +5,12 @@
     <v-card-title class="d-flex justify-center">{{title}}</v-card-title>
 
     <div class="mb-5">
-      <v-btn @click.prevent="downloadItem(imgLink, title)" x-large color="red" dark>Baixar a bola</v-btn>
+      <v-btn
+        @click.prevent="downloadItem((repository + imgLink), title)"
+        x-large
+        color="red"
+        dark
+      >Baixar a bola</v-btn>
     </div>
   </v-card>
 </template>
@@ -26,7 +31,6 @@ export default {
   methods: {
     downloadItem(url, title) {
       /* eslint-disable no-console */
-      console.log(process.env);
       Axios.get(url, { responseType: "blob" })
         .then(({ data }) => {
           const blob = new Blob([data], { type: "application/jpg" });
