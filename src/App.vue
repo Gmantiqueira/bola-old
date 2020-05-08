@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import BolaList from "./components/BolaList";
+import BolaList from './components/BolaList'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     BolaList
   }
-};
+}
 </script>

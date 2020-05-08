@@ -13,10 +13,12 @@
 </template>
 
 <script>
-import Bola from "@/components/Bola";
-import Jabulani from "@/assets/jabulani.jpg";
-import Golf from "@/assets/golf.jpg";
-import Baseball from "@/assets/baseball.jpg";
+import Bola from '@/components/Bola'
+import Jabulani from '@/assets/jabulani.jpg'
+import Golf from '@/assets/golf.jpg'
+import Baseball from '@/assets/baseball.jpg'
+import Tenis from '@/assets/tenis.jpg'
+import RocketLeague from '@/assets/rocket-league.jpg'
 
 export default {
   components: { Bola },
@@ -25,19 +27,29 @@ export default {
       {
         link: Jabulani,
         id: 1,
-        title: "Jabulani"
+        title: 'Jabulani'
       },
       {
         link: Golf,
         id: 2,
-        title: "Golf"
+        title: 'Golf'
       },
       {
         link: Baseball,
         id: 3,
-        title: "Baseball"
+        title: 'Baseball'
+      },
+      {
+        link: Tenis,
+        id: 4,
+        title: 'Tenis'
+      },
+      {
+        link: RocketLeague,
+        id: 5,
+        title: 'Rocket League'
       }
     ]
   })
-};
+}
 </script>
