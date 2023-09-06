@@ -8,13 +8,6 @@
   // If you have a monorepo, put the paths of the packages here. We'll infer the package names.
   // Globs are supported.
   "packages": ["packages/react", "packages/react-dom"],
-  // If you don't publish from the package directory, specify per dependency
-  // where the contents of the built dependency are. These files will be uploaded
-  // to our registry.
-  "publishDirectory": {
-    "react": "build/node_modules/react",
-    "react-dom": "build/node_modules/react-dom"
-  },
   // A list of Browser Sandboxes that you want generated for a PR, if this list
   // is not set we will default to `vanilla`. The built library will automatically
   // be installed in the fork of these sandboxes in the place of the library. So if
